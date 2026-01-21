@@ -1,0 +1,5 @@
+MERN/
+/MERN/*
+node_modules/
+# Ignore MERN folder
+/MERN/

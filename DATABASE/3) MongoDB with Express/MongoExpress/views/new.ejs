@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Chat</title>
+    <style>
+      .btn-new {
+        color: black;
+        border-radius: 5px;
+        padding: 10px 12px;
+        border: none;
+        margin: 5px;
+        text-align: center;
+      }
+      .btn-new :hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(68, 159, 196);
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        justify-content: center;
+        margin: 10px auto;
+        border: 2px solid blue;
+        padding: 25px;
+      }
+      .input-formz {
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">Add New Chat !</h2>
+    <form action="/chats" method="post" class="form">
+      <input type="text" placeholder="Your Name!" name="from" /
+      class="input-formz">
+      <textarea
+        name="msg"
+        id=""
+        placeholder="Enter Your Message!"
+        class="input-formz"
+      ></textarea>
+      <input type="text" placeholder="Reciever Name!" name="to" /
+      class="input-formz">
+      <button class="btn-new">Add Chat!</button>
+    </form>
+  </body>
+</html>

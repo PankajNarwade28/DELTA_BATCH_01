@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice Questions 1 : Part 12</title>
+</head>
+
+<body>
+    <h1>Pankaj Narwade</h1>
+    <script>
+        // async function greet() {
+        //     // throw "weak connection" ;
+        //     return "Hello!";
+        // }
+        // greet()
+        //     .then((result) => {
+        //         console.log("Promise was resolved!");
+        //         console.log(result);
+        //     })
+        //     .catch((er) => {
+        //         console.log("Promise was rejected!");
+        //         console.log(er);
+        //     })
+        // let demo = async () => {
+        //     // console.log("Hello World!");
+        //     return "Hello!";
+        // }
+        //  demo();
+
+        // demo();
+
+        let h1 = document.querySelector("h1");
+        function changeColor(color) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let num = Math.floor(Math.random() * 10);
+                    if (num > 3) {
+                        reject("Promise Rejected");
+                    }
+                    h1.style.color = color;
+                    console.log(`Color changed to ${color}`);
+                    resolve("color changed");
+                }, 1000);
+            })
+        }
+
+        async function demo1() {
+            try {
+                await changeColor("red");
+                await changeColor("yellow");
+                await changeColor("orange");
+                await changeColor("blue");
+            }catch(er){
+                console.log(er);
+            }
+            
+
+            console.log("Hello World!");
+        }
+        demo1();
+        function getNum() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let num = Math.floor(Math.random() * 11);
+                    console.log(num);
+                    resolve("Num");
+                }, 1000);
+            })
+
+        }
+        // async function demo2() {
+        //     await getNum();
+        //     await getNum();
+        //     await getNum();
+        //     getNum();
+        // }
+        // demo2();
+    </script>
+</body>
+
+</html>

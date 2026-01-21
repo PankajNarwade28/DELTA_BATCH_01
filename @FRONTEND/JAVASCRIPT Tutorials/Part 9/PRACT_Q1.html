@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions : Part 9</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let body=document.querySelector("body");
+        let para=document.createElement("p");
+        para.innerText="Hey! I am red.";
+        body.append(para);
+        para.style.color="red";
+
+        let H3=document.createElement("h3");
+        H3.innerText="Hey I am Blue!";
+        H3.classList.add("blue");
+        body.append(H3);
+
+        let H1=document.createElement("h1");
+        let para3=document.createElement("p");
+        let div=document.createElement("div");
+        H1.innerText="I am in Div";
+        para3.innerText="Mee too!";
+        div.style.backgroundColor="pink";
+        div.style.border="2px solid black";
+        div.appendChild(H1);
+        div.prepend(para3);
+        body.prepend(div);
+    </script>
+</body>
+</html>

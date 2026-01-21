@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Message</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .btn-new {
+        color: black;
+        border-radius: 5px;
+        padding: 10px 12px;
+        border: none;
+        margin: 5px;
+        text-align: center;
+      }
+      .btn-new :hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(68, 159, 196);
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        justify-content: center;
+        margin: 10px auto;
+        border: 2px solid blue;
+        padding: 25px;
+      }
+      .input-formz {
+        margin: 5px;
+        padding: 5px;
+      }
+      .text {
+        background-color: azure;
+        padding: 2px 10px;
+        color: rgb(14, 7, 7);
+        font-size: medium;
+        font-weight: 600;
+      }
+      .msg {
+        color: white;
+        background-color: rgb(59, 187, 219);
+        padding: 5px 50px;
+        margin: 10px;
+        text-align: right;
+        border-radius: 5px;
+      }
+      .flex-f {
+        display: flex;
+        flex-direction: column;
+      }
+      .btn-new {
+        color: black;
+        border-radius: 5px;
+        padding: 10px 12px;
+        border: none;
+        margin: 5px;
+        text-align: center;
+        text-decoration: underline transparent;
+      }
+      .btn-new:hover {
+        color: black;
+        box-shadow: 1px 1px 10px rgb(22, 208, 233);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h4 style="text-align: center">Editing Messages of ID: <%= chat._id%></h4>
+      <p class="text">Sent by : <%= chat.from %></p>
+      <form
+        action="/chats/<%=chat._id%>?_method=PUT"
+        method="post"
+        class="flex-f"
+      >
+        <textarea
+          name="newMsg"
+          placeholder="Enter Your Message!"
+          class="msg"
+          cols="10"
+        >
+ <%= chat.msg %> </textarea
+        >
+
+        <button class="btn-new">Update Chat!</button>
+      </form>
+      <p class="text">Recieved By: <%= chat.to %></p>
+    </div>
+  </body>
+</html>

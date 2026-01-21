@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question Part 9:</title>
+    <style>
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let body = document.querySelector("body");
+        let btn = document.createElement("button");
+        let inp = document.createElement("input");
+        btn.innerText = "Click Me!";
+        inp.placeholder = "input Me!";
+        btn.getAttribute("btn");
+        btn.setAttribute("id", "btn");
+        let btn2 = document.getElementById('btn');
+        btn.style.color = "white"
+        btn.style.backgroundColor = "blue"
+        let h1 = document.createElement("h1");
+        h1.innerText = "DOM Practice!";
+        h1.style.color = "purple";
+        h1.style.textDecoration = "underline";
+        h1.classList.add("text-center");
+        let para = document.createElement('p');
+        para.innerHTML = "Apna College <b> Delta Practice</b>";
+        body.append(btn);
+        body.append(inp);
+        body.prepend(h1);
+        body.appendChild(para);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">All Chats</h2>
+    <form action="/chats/new">
+      <div class="center">
+        <button class="btn-new">Add New Chat!</button>
+      </div>
+    </form>
+    <div class="container">
+      <% for (let chat of Chats){%>
+      <div class="chat">
+        <p class="text">
+          <span class="from-to">From:</span>&nbsp;&nbsp;&nbsp; <%= chat.from%>
+        </p>
+        <p class="msg"><%= chat.msg%></p>
+
+        <p class="text">
+          <span class="from-to">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To: </span
+          >&nbsp;&nbsp;&nbsp;<%= chat.to%>
+        </p>
+        <div class="form-btn">
+          <form action="/chats/<%= chat._id %>/edit" class="">
+            <button class="btn-edt">Edit</button>
+          </form>
+          <form action="/chats/<%= chat._id %>/?_method=DELETE" method="post">
+            <button class="btn-dlt">Delete</button>
+          </form>
+        </div>
+
+        <div class="date">
+          <p><%=chat.created_at.toString().split(" ")[4] %></p>
+          <p>
+            <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %>
+          </p>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </body>
+</html>

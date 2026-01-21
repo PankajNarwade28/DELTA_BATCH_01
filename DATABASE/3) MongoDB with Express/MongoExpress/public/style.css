@@ -1,0 +1,99 @@
+.container {
+  background-color: darkslategray;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chat {
+  border-radius: 5px;
+  margin: 10px 20px;
+  background-color: aliceblue;
+  padding: 3px;
+  width: 33%;
+  height: auto;
+}
+.from-to {
+  background-color: rgb(4, 226, 178);
+  padding: 2px 5px;
+  color: black;
+  font-weight: 800;
+}
+.text {
+  background-color: azure;
+  padding: 2px 10px;
+  color: rgb(14, 7, 7);
+  font-size: medium;
+  font-weight: 600;
+}
+.msg {
+  color: white;
+  background-color: rgb(59, 187, 219);
+  padding: 5px 50px;
+  margin: 10px;
+  text-align: right;
+  border-radius: 5px;
+}
+
+.centerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.btn-new {
+  color: black;
+  border-radius: 5px;
+  padding: 10px 12px;
+  border: none;
+  margin: 5px;
+  text-align: center;
+  text-decoration: underline transparent;
+}
+.btn-new:hover {
+  color: black;
+  box-shadow: 1px 1px 10px rgb(22, 208, 233);
+}
+.btn-edt {
+  color: rgb(0, 44, 240);
+  border-radius: 5px;
+  padding: 3px 20px;
+  border: 1px solid black;
+  margin: 2px 20px;
+  text-align: center;
+}
+.btn-edt:hover {
+  box-shadow: 1px 1px 10px rgb(70, 73, 255);
+}
+.btn-dlt {
+  color: rgb(235, 65, 13);
+  border-radius: 5px;
+  padding: 3px 20px;
+  border: 1px solid black;
+  margin: 2px 20px;
+  text-align: center;
+}
+.btn-dlt:hover {
+  box-shadow: 1px 1px 10px rgb(233, 68, 18);
+}
+.center {
+  text-align: center;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.date p {
+  font-size: 0.8rem;
+}
+.form-btn {
+  display: flex;
+  justify-content: space-around;
+}

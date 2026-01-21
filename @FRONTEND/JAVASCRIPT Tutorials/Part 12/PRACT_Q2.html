@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question 2 -Part 12</title>
+</head>
+
+<body>
+    <script>
+        // function saveToDb(data, success, failure) {
+        //     let speed = Math.floor(Math.random() * 10) + 1;
+        //     if (speed > 4) {
+        //         success();
+        //     } else {
+        //         failure();
+        //     }
+        // }
+
+
+        function saveToDb(data ) {
+            return new Promise ((resolve ,reject)=>{
+                let speed = Math.floor(Math.random() * 10) + 1;
+            if (speed > 4) {
+                resolve("success:Data saved");
+            } else {
+                reject("failure:Weak Connection");
+            }
+            });
+            
+        }
+
+
+  
+
+
+      
+
+       
+        
+        // saveToDb("Pankaj Narwade",
+        //     () => {
+        //         console.log("Success: data saved");
+        //         saveToDb("BCA 3",
+        //                 () => {
+        //                     console.log("Success2: data saved");
+        //                     saveToDb ( "Last Year",
+        //                             () => {
+        //                                 console.log("Success3: data saved");
+        //                                 saveToDb ( "Last Year",
+        //                                 () => {
+        //                                     console.log("Success4: data saved");
+        //                                       },
+        //                              () => {
+        //                                   console.log("Failure4: data is not saved");
+        //                                    }
+        //                                        )
+
+        //                             },
+        //                             () => {
+        //                                 console.log("Failure3: data is not saved");
+        //                             }
+        //                         )
+        //                 },
+        //                 () => {
+        //                     console.log("Failure2: data is not saved");
+        //                 }
+        //             )
+        //     },
+        //     () => {
+        //         console.log("Failure: data is not saved");
+        //     })
+
+        // Then() and Catch()
+
+          //    let req= saveToDb("Pankaj Narwade");
+    //    req.then(()=>{
+    //         console.log("Promise Resolved!");
+    //         console.log(req);
+    //     }).catch(()=>{
+    //         console.log("Promise Rejected!");
+    //         console.log(req);
+    //     })
+            
+        //  Promissees
+        
+        // saveToDb("Pankaj Narwade").then(()=>{
+        //     console.log("Promise Resolved!");
+        // }).catch(()=>{
+        //     console.log("Promise Rejected!");
+        // })
+
+            // Promise Chainning
+
+        // saveToDb("Pankaj Narwade")
+        // .then(()=>{
+        //     console.log("Data1 Saved!");
+        //     return saveToDb("BCA 3");
+        // })
+        // .then(()=>{
+        //     console.log("Data2 Saved!");
+        // })
+        // .catch(()=>{
+        //     console.log("Weak Connection!");
+        // })
+
+        //    results and errors in promises
+
+        saveToDb("Pankaj Narwade")
+        .then((result)=>{
+            console.log("Data1 Saved!");
+            console.log(" result is ",result);
+            return saveToDb("BCA 3");
+        })
+        .then((result)=>{
+            console.log("Data2 Saved!");
+            console.log("result is ",result);
+        })
+        .catch((error)=>{
+            console.log("Weak Connection!");
+            console.log("error is ",error);
+        })
+    </script>
+</body>
+
+</html>

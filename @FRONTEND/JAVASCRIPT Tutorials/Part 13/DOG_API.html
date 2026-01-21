@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios in javascript:Part 13</title>
+    <style>
+        img{
+            max-width: 400px;
+            max-height: 400px;
+            border: 2px solid black;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="result">Get Random Dog Images.</h1>
+    <button class="btn">Get Image!</button><br><br>
+    <img src=""   class="img" alt="Please Wait few seconds After Clicking button!">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let img = document.querySelector(".img");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", async () => {
+            let link = await getImg();
+            console.log(link);
+            img.setAttribute("src",link);
+        })
+
+        url = "https://dog.ceo/api/breeds/image/random";
+        async function getImg() {
+            try {
+                let res = await axios.get(url);
+                // console.log(res.data.message);
+                return res.data.message;
+            } catch (er) {
+                console.log(er);
+                return "No Image Found!";
+            }
+        }
+        getImg();
+    </script>
+</body>
+
+</html>

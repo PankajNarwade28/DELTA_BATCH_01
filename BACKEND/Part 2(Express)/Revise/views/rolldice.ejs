@@ -1,0 +1,9 @@
+<%- include("includes/header.ejs")%>
+  <body>
+    <h1>Your Dice value is : <%= diceVal%></h1>
+    <% if(diceVal==6){ %>
+    <h1>Nice! try again.</h1>
+    <% } %>
+  </body>
+</html>
+<%- include("includes/footer.ejs")%>

@@ -1,0 +1,26 @@
+body {
+  background-color: bisque;
+}
+.h1 {
+  color: red;
+  font: 400;
+}
+.h4 {
+  color: lightsalmon;
+}
+.user {
+  display: block;
+  color: rgb(0, 0, 0);
+}
+.posts {
+  border-bottom: 1px solid rgb(226, 38, 38);
+  border-radius: 5px;
+  margin: 3px;
+  box-shadow: 3px 3px 4px rgb(136, 131, 131);
+}
+.btn {
+  margin: 10px;
+  padding: 5px;
+  color: red;
+  background-color: greenyellow;
+}

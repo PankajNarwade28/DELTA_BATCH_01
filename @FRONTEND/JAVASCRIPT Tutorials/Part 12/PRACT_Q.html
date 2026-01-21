@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Requests</title>
+</head>
+<body>
+    <script>
+        // let url="https://icanhazdadjoke.com/slack";
+        let url="https://catfact.ninja/fact";
+        fetch(url)
+        .then((res)=>{
+            return res.json();
+        })
+        .then((data1)=>{
+            console.log(data1.fact);
+            return fetch(url);
+        })
+        .then((res)=>{
+            return res.json();
+        })
+        .then((data2)=>
+        {console.log(data2.fact);
+        })
+        .catch((er)=>{
+            console.log(er);
+        })
+console.log("hello World!");
+async function getData(){
+    try{
+        let res3= await fetch(url);
+        let data3=await res3.json();
+        console.log(data3);
+    }catch(er){
+        console.log(er);
+    };}
+    </script>
+</body>
+</html>

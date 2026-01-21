@@ -1,0 +1,45 @@
+ .card {
+    width: 450px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  h2 {
+    color: #d56f3e;
+    font-size: 40px;
+  }
+  
+  span {
+    color: #9d6f24;
+  }
+   
+  h4 {
+    text-align: right;
+    color: #3c787e;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #pets {
+    display: flex;
+    justify-content: space-evenly;
+  } 
+  @media (max-width:950px)
+  {
+    #pets{
+        flex-wrap: wrap;
+    }
+  }
+  @media (max-width:1100px) and (min-width:550px)
+  {
+     .card{
+        width: 600px;
+     }
+  }

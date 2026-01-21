@@ -1,0 +1,96 @@
+.container {
+    display: grid;
+    grid-template-rows: repeat(12, 50px);
+    grid-template-columns: repeat(12, 50px);
+    grid-gap: 10px;
+    /* row-gap: 10PX;
+                         column-gap: 10PX; */
+    ;
+    font-size: 1.5rem;
+    height: 60%;
+}
+
+.item {
+    background-color: pink;
+
+}
+
+.header {
+    /* grid-column-start: 1;
+    grid-column-end: 13; */
+    /* Shorthand */
+    grid-column: 1/ span 12;
+}
+
+.sidebar {
+    /* grid-row-start: 2;
+    grid-row-end: 12;
+    */
+    /* Shorthand */
+    grid-row: 2 / span 10;
+
+    /* grid-column-start: 1;
+    grid-column-end: 4;  */
+    grid-column: 1/ span 3;
+}
+
+.navigation {
+    /* grid-column-start: 4;
+    grid-column-end: 10; */
+    /* Shorthand */
+    grid-column: 4 / span 6;
+
+}
+
+.main {
+    /* grid-column-start: 4;
+    grid-column-end: 10; */
+    /* Shorthand */
+    grid-column: 4 / span 6;
+    /* grid-row-start: 3;
+    grid-row-end: 12; */
+    /* Shorthand */
+    grid-row: 3/ span 9;
+}
+
+.ads {
+    /* grid-column-start: 10;
+    grid-column-end: 13; */
+    grid-column: 10 / span 3;
+    /* grid-row-start: 2;
+    grid-row-end: 12;  */
+    grid-row: 2 /span 10;
+}
+
+.footer {
+    /* grid-column-start: 1;
+    grid-column-end: 13; */
+    grid-column: 1 /span 12;
+}
+
+/* Question 2 ans by using Media Queries  */
+@media(max-width:750px) {
+    .navigation {
+        grid-column: 1 / span 12;
+        grid-row: 2; /*  Optional */
+    }
+
+    .sidebar {
+        grid-row: 3 / span 9;
+    }
+
+    .ads {
+        grid-column: 1 / span 3;
+        grid-row: 12;
+    }
+
+    .main {
+        grid-row: 3 /span 9;
+        grid-column: 4 /span 9;
+    }
+
+    .footer {
+        grid-column: 4 / span 9;
+
+    }
+}

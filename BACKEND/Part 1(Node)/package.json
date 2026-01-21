@@ -1,0 +1,15 @@
+{
+  "name": "part-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "import.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pankaj",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "figlet": "^1.8.0"
+  }
+}

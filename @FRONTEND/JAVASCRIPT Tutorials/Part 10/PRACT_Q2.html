@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question 2 for Part 10:</title>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <button>This is a Button.</button>
+    <h2>This is Heading 2.</h2>
+    <b>This is Bold.</b>
+    <script>
+        let para=document.querySelector("p");
+        let btn=document.querySelector("button");
+        let h2=document.querySelector("h2");
+        let b=document.querySelector("b");
+        function changeBG(){
+            this.style.backgroundColor="cyan";
+             
+        }
+       para.addEventListener("click",changeBG);
+       btn.addEventListener("mouseleave",changeBG);
+       h2.addEventListener("dblclick",changeBG);
+       b.addEventListener("mouseenter",changeBG);
+    </script>
+</body>
+</html>

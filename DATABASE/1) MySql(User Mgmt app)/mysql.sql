@@ -1,0 +1,6 @@
+ CREATE TABLE USER(
+    id VARCHAR(100) PRIMARY KEY,
+    Username VARCHAR(30) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Password VARCHAR(30)
+ );

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Part 10:</title>
+</head>
+<body>
+    <form action="\sad" id="frm">
+    <input type="text" id="user" placeholder="username">
+    <input type="password" name="" id="pass" placeholder="password">
+    <button class="reg">Register!</button></form>
+    <h1>My Text Editor</h1>
+    <H2></H2>
+    <input type="text" id="input" placeholder="Enter here>">
+    
+    <script>
+        let form=document.querySelector("#frm");
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            let user=document.querySelector("#user")
+            let pass=document.querySelector("#pass")
+            console.log(user.value); 
+            console.log(pass.value);
+        alert(`${user.value} Your Password is ${pass.value}.`);
+        })
+        let para=document.querySelector("H2");
+        let input=document.querySelector("#input")
+        input.addEventListener("input",function(event){
+            event.preventDefault();
+            console.log(input.value);
+            para.innerText=input.value;
+        }
+        )
+    </script>
+</body>
+</html>

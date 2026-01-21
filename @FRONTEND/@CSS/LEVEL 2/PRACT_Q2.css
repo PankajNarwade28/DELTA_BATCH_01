@@ -1,0 +1,127 @@
+/* Universal Selector */
+* {
+    top: 0;
+}
+
+/* Element Selector */
+h1 {
+    color: white;
+}
+
+/* Multiple Element Selector */
+h1,
+h3 {
+    color: #e53939;
+}
+
+/* ID Selector */
+#signup {
+    background-color: #e53939;
+    color: #fff;
+}
+
+/* Class Selector */
+
+.upvote {
+    color: white;
+    background-color: green;
+}
+
+/* Descendent Selector */
+
+/* the following will be applicable for all anchor tags which are included in the pargraph tag
+
+p a{
+    color: purple;
+    background-color: yellow;
+} */
+
+/* and to avoid such cases we can use a class to add css to particular anchor tags of paragraph as follows  */
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+/* we can select multiple  */
+/* case 1 */
+/* nav ul li a {
+    color: black;
+} */
+/* we can add it directly without specifying unnecessary tags  */
+nav a {
+    color: black;
+}
+
+/* Sibling Selector is used to add css with tags having same level
+'+' is used in this case */
+
+p+h3 {
+    text-decoration: underline;
+}
+
+/* to effect specific by using class selector with sibling */
+.upvote+button {
+    color: blue;
+    background-color: beige;
+}
+
+/* Child Combinator */
+div>input {
+    background-color: aquamarine;
+    color: chartreuse;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    color: rgb(29, 11, 11);
+}
+
+input[type="password"] {
+    color: red;
+}
+
+/* Pseudo Class Properties */
+.upvote:hover {
+    background-color: rgb(89, 195, 209);
+    color: #1d1a1a;
+}
+
+.upvote:checked {
+    background-color: rgb(64, 229, 49);
+    color: #d2c4c4;
+}
+
+.upvote+button:hover {
+    background-color: rgb(177, 242, 46);
+    color: #c02a2a;
+
+}
+
+.upvote+button:active {
+    background-color: rgb(177, 242, 46);
+    color: #221d1d;
+
+}
+
+/* Pseudo class selector with attribute selector and child combinator  */
+
+input[type="radio"]:checked+label {
+    color: #cb1313;
+    font-weight: 500;
+}
+
+/* Pseudo class for selecting nth type of tag to add css */
+div:nth-of-type(2n) {
+    background-color: rgb(193, 178, 118);
+}
+
+/* Pseudo Element */
+h1::first-letter{
+    color: brown;
+}
+div p::first-line{
+    color: rgb(8, 72, 156);
+}
+div p::selection{
+    background-color: rgb(149, 117, 14);
+}
